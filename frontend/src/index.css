@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+@theme {
+  --breakpoint-ms: 20rem;
+  --breakpoint-mm: 23rem;
+  --breakpoint-ml: 27rem;
+
+  @keyframes slider {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  --animate-slider: slider 25s linear infinite;
+}

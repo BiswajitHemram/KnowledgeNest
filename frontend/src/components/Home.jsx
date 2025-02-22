@@ -12,37 +12,35 @@ import codeCov from "../assets/Home/CodeCov.png";
 import userTesting from "../assets/Home/UserTesting.png";
 import magicLeap from "../assets/Home/Magic-Leap.png";
 
-
-
 export default function Home() {
   return (
     <>
-      <div className="container mx-auto flex items-center justify-between mt-[85px]">
-        <div className="left w-[570px] relative">
-          <h1 className="text-[64px] capitalize font-bold leading-[82px] z-10">
+      <div className="flex flex-col  gap-9 mm:justify-between mt-[45px] p-3">
+        <div className="left mm:w-[570px] relative order-2">
+          <h1 className="text-2xl  mm:text-[64px] capitalize font-bold mm:leading-[82px] z-10">
             up your <span className="text-[#20B486]">skills</span> to{" "}
             <span className="text-[#20B486]">advance</span> your{" "}
             <span className="text-[#20B486]">career</span> path
           </h1>
-          <p className="text-[#646464] mt-[22px] text-">
-            Unlock your potential with KnowledgeNest—upskilling made simple,
+          <p className="text-[#646464] mt-[22px] text-[14px]">
+            Unlock your potential with KnowledgeNest — upskilling made simple,
             learning made limitless
           </p>
-          <button className="w-[157px] h-[60px] bg-[#20B486] text-white rounded-lg text-lg font-semibold mt-[22px] cursor-pointer">
+          <button className="w-[110px] h-[40px] bg-[#20B486] text-white rounded-lg  font-semibold mt-[22px] cursor-pointer">
             Get Started
           </button>
           <ol className="flex gap-9 mt-[45px]">
-            <li className="font-normal text-[#646464] capitalize inline-flex gap-2.5 items-center">
+            <li className="font-normal text-[14px] text-[#646464] capitalize flex flex-col gap-2.5 items-center text-center">
               <img src={publicSpeaking} alt="" />
-              Public Speaking
+              <p>Public Speaking</p>
             </li>
-            <li className="font-normal text-[#646464] capitalize inline-flex gap-2.5 items-center">
+            <li className="font-normal text-[14px] text-[#646464] capitalize flex flex-col gap-2.5 items-center text-center">
               <img src={careerOrientend} alt="" />
-              career-oriented
+              <p>career oriented</p>
             </li>
-            <li className="font-normal text-[#646464] capitalize inline-flex gap-2.5 items-center">
+            <li className="font-normal text-[14px] text-[#646464] capitalize flex flex-col gap-2.5 items-center text-center">
               <img src={creativeThinking} alt="" />
-              creative thinking
+              <p>creative thinking</p>
             </li>
           </ol>
           {/* absolute -top-[115] -left-95 -z-10 */}
@@ -51,37 +49,36 @@ export default function Home() {
             <img src={smallDot} className="absolute top-[130px] left-[60px]" />
           </div>
         </div>
-        <div className="right relative">
-          <div className="w-[495px] h-[495px] bg-[#20B486] p-[0.1px] rounded-full overflow-hidden">
-            <img src={frontPage} className="mt-[68px] mx-auto my-0" />
+        <div className="right relative order-1">
+          <div className="w-[285px] h-[285px] ms:w-[325px] ms:h-[325px] bg-[#20B486] p-[0.1px] rounded-full overflow-hidden">
+            <img src={frontPage} className="mt-[28px] ms:mt-[65px] h-[260px] mx-auto my-0" />
           </div>
           <img
             src={placeholder}
-            className="absolute -top-[25px] -left-[25px] -z-10"
+            className="absolute -top-[12px] -left-[20px] -z-10"
           />
-          <img src={bigDot} className="absolute left-[25px] bottom-[25px]" />
+          <img
+            src={bigDot}
+            className="absolute left-[25px] -bottom-[25px] w-[30px]"
+          />
         </div>
       </div>
-      <div className="container mx-auto flex items-center justify-between mt-[50px]">
-        <p className="text-3xl capitalize"><span className=" font-bold text-[#20B486]">250+</span> <br /> <span className="text-2xl text-[#101828]">collaboration</span></p>
-        <img src={duoligo} alt="" />
-        <img src={codeCov} alt="" />
-        <img src={userTesting} alt="" />
-        <img src={magicLeap} alt="" />
-        {/* <p>CodeCov</p>
-        <p>UserTesting</p>
-        <p>magic leap</p> */}
+      <div className="brand w-full overflow-hidden my-16 flex">
+        <div className="logo-container whitespace-nowrap shrink-0  animate-slider">
+          <img className="inline-block mx-10" src={duoligo} alt="" />
+          <img className="inline-block mx-10" src={codeCov} alt="" />
+          <img className="inline-block mx-10" src={userTesting} alt="" />
+          <img className="inline-block mx-10" src={duoligo} alt="" />
+          <img className="inline-block mx-10" src={magicLeap} alt="" />
+        </div>
+        <div className="logo-container whitespace-nowrap shrink-0  animate-slider">
+          <img className="inline-block mx-10" src={duoligo} alt="" />
+          <img className="inline-block mx-10" src={codeCov} alt="" />
+          <img className="inline-block mx-10" src={userTesting} alt="" />
+          <img className="inline-block mx-10" src={duoligo} alt="" />
+          <img className="inline-block mx-10" src={magicLeap} alt="" />
+        </div>
       </div>
     </>
   );
-}
-
-{
-  /* <div>
-            <p>250+ collaboration</p>
-            <p>Duoligo</p>
-            <p>CodeCov</p>
-            <p>UserTesting</p>
-            <p>magic leap</p>
-          </div> */
 }

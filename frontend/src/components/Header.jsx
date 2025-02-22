@@ -1,21 +1,22 @@
 import { FaShoppingCart, FaSearch } from "react-icons/fa";
+import { CiMenuFries } from "react-icons/ci";
 import { Link, NavLink } from "react-router-dom";
 import pageIconSVG from "../assets/logo/remove.png";
 
 export default function Header() {
   return (
-    <header className="bg-white p-4">
-      <div className="container mx-auto flex items-center justify-between">
+    <header className="bg-white mm:bg-orange-500 p-3">
+      <div className=" flex items-center justify-between">
         {/* Logo */}
         <Link
           to="/"
           className="text-2xl font-bold text-blue-600 cursor-pointer"
         >
-          <img src={pageIconSVG} alt="" style={{ width: 55, height: 55 }} />
+          <img src={pageIconSVG} alt="" style={{ width: 45, height: 45 }} />
         </Link>
 
         {/* Search Bar */}
-        <div className="relative w-1/3">
+        <div className="hidden mm:block relative w-1/3">
           <input
             type="text"
             placeholder="Search..."
@@ -25,7 +26,7 @@ export default function Header() {
         </div>
 
         {/* Navigation Links */}
-        <nav className="flex space-x-6 text-gray-700 font-medium">
+        <nav className="hidden mm:flex space-x-6 text-gray-700 font-medium">
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -69,7 +70,7 @@ export default function Header() {
         </nav>
 
         {/* Cart & Auth Buttons */}
-        <div className="flex items-center space-x-4">
+        <div className="hidden mm:flex items-center space-x-4">
           <FaShoppingCart className="text-2xl text-gray-700 cursor-pointer hover:text-blue-600" />
           <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded hover:bg-blue-600 hover:text-white cursor-pointer">
             Sign In
@@ -78,6 +79,8 @@ export default function Header() {
             Login
           </button>
         </div>
+      <CiMenuFries size={25}/>
+
       </div>
     </header>
   );
