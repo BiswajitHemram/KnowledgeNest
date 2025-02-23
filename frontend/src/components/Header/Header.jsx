@@ -1,32 +1,32 @@
 import { FaShoppingCart, FaSearch } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
 import { Link, NavLink } from "react-router-dom";
-import pageIconSVG from "../assets/logo/remove.png";
+import pageIconSVG from "../../assets/logo/remove.png";
 
 export default function Header() {
   return (
-    <header className="bg-white mm:bg-orange-500 p-3">
-      <div className=" flex items-center justify-between">
+    <header className="bg-white p-3 lg:px-5 2xl:container 2xl:mx-auto">
+      <div className="flex items-center justify-between">
         {/* Logo */}
         <Link
           to="/"
-          className="text-2xl font-bold text-blue-600 cursor-pointer"
+          className="cursor-pointer text-2xl font-bold text-blue-600"
         >
           <img src={pageIconSVG} alt="" style={{ width: 45, height: 45 }} />
         </Link>
 
         {/* Search Bar */}
-        <div className="hidden mm:block relative w-1/3">
+        <div className="relative hidden w-1/3 lg:block">
           <input
             type="text"
             placeholder="Search..."
-            className="w-full border rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full rounded-full border px-4 py-2 pl-10 focus:ring-2 focus:ring-blue-400 focus:outline-none"
           />
           <FaSearch className="absolute top-3 left-3 text-gray-500" />
         </div>
 
         {/* Navigation Links */}
-        <nav className="hidden mm:flex space-x-6 text-gray-700 font-medium">
+        <nav className="hidden space-x-6 font-medium text-gray-700 md:flex">
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -70,17 +70,16 @@ export default function Header() {
         </nav>
 
         {/* Cart & Auth Buttons */}
-        <div className="hidden mm:flex items-center space-x-4">
-          <FaShoppingCart className="text-2xl text-gray-700 cursor-pointer hover:text-blue-600" />
-          <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded hover:bg-blue-600 hover:text-white cursor-pointer">
+        <div className="hidden items-center space-x-4 lg:flex">
+          <FaShoppingCart className="cursor-pointer text-2xl text-gray-700 hover:text-blue-600" />
+          <button className="cursor-pointer rounded border border-blue-600 px-4 py-2 text-blue-600 hover:bg-blue-600 hover:text-white">
             Sign In
           </button>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 cursor-pointer">
+          <button className="cursor-pointer rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
             Login
           </button>
         </div>
-      <CiMenuFries size={25}/>
-
+        <CiMenuFries size={25} className="lg:hidden" />
       </div>
     </header>
   );
