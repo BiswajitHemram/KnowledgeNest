@@ -1,23 +1,33 @@
 import React from "react";
-import publicSpeaking from "../../assets/Home/public-speaking.png";
-import careerOrientend from "../../assets/Home/career-oriented.png";
-import creativeThinking from "../../assets/Home/creative-thinking.svg";
-import frontPage from "../../assets/Home/frontpage.png";
-import roundRing from "../../assets/Home/round-ring.png";
-import smallDot from "../../assets/Home/small-dot.svg";
-import bigDot from "../../assets/Home/big-dot.svg";
-import placeholder from "../../assets/Home/placeholder.svg";
-import duoligo from "../../assets/Home/duolingo.png";
-import codeCov from "../../assets/Home/CodeCov.png";
-import userTesting from "../../assets/Home/UserTesting.png";
-import magicLeap from "../../assets/Home/Magic-Leap.png";
+import publicSpeaking from "../../assets/Home/Hero_Section/public-speaking.png";
+import careerOrientend from "../../assets/Home/Hero_Section/career-oriented.png";
+import creativeThinking from "../../assets/Home/Hero_Section/creative-thinking.svg";
+import frontPage from "../../assets/Home/Hero_Section/frontpage.png";
+import roundRing from "../../assets/Home/Hero_Section/round-ring.png";
+import smallDot from "../../assets/Home/Hero_Section/small-dot.svg";
+import bigDot from "../../assets/Home/Hero_Section/big-dot.svg";
+import placeholder from "../../assets/Home/Hero_Section/placeholder.svg";
+import duoligo from "../../assets/Home/Brand_Collabratoin/duolingo.png";
+import codeCov from "../../assets/Home/Brand_Collabratoin/CodeCov.png";
+import userTesting from "../../assets/Home/Brand_Collabratoin/UserTesting.png";
+import magicLeap from "../../assets/Home/Brand_Collabratoin/Magic-Leap.png";
+import artsDesignIcon from "../../assets/Home/Categories/arts_design.png";
+import developmentIcon from "../../assets/Home/Categories/development.png";
+import communicationIcon from "../../assets/Home/Categories/communication.png";
+import videographyIcon from "../../assets/Home/Categories/videography.png";
+import photographyIcon from "../../assets/Home/Categories/photography.png";
+import marketingIcon from "../../assets/Home/Categories/marketing.png";
+import contentWritingIcon from "../../assets/Home/Categories/content_writing.png";
+import financeIcon from "../../assets/Home/Categories/finance.png";
+import scienceIcon from "../../assets/Home/Categories/science.png";
 import "./Home.css";
+import CategoryCard from "./CategoryCard";
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <div className="ms:items-center mt-[45px] flex flex-col gap-9 p-3 sm:mt-[60px] sm:flex-row md:justify-between lg:px-5 2xl:container 2xl:mx-auto">
+      <div className="ms:items-center mt-[45px] flex flex-col gap-9 p-3 sm:mt-[60px] sm:flex-row md:justify-between lg:px-10 2xl:container 2xl:mx-auto">
         {/* Left Side Text Content */}
         <div className="left relative order-2 sm:order-1 md:w-[570px]">
           {/* Hero Section Heading */}
@@ -31,7 +41,7 @@ export default function Home() {
             Unlock your potential with KnowledgeNest — upskilling made simple,
             learning made limitless
           </p>
-          <button className="mt-[22px] h-[40px] w-[110px] lg:w-[130px] lg:h-[50px] lg:text-lg cursor-pointer rounded-lg bg-[#20B486] font-semibold text-white">
+          <button className="mt-[22px] h-[40px] w-[110px] cursor-pointer rounded-lg bg-[#20B486] font-semibold text-white lg:h-[50px] lg:w-[130px] lg:text-lg">
             Get Started
           </button>
           {/* Outcome After UpSkill */}
@@ -49,6 +59,7 @@ export default function Home() {
               <p>creative thinking</p>
             </li>
           </ol>
+
           <div className="absolute -top-[110px] -left-[140px] -z-10">
             <img src={roundRing} className="" />
             <img src={smallDot} className="absolute top-[130px] left-[60px]" />
@@ -71,7 +82,13 @@ export default function Home() {
             className="absolute -bottom-[25px] left-[25px] w-[30px]"
           />
         </div>
+        {/* Light Green Radius Spread */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute bottom-[0%] left-[0%] h-56 w-56 rounded-full bg-green-400 opacity-20 blur-3xl"></div>
+          <div className="absolute right-[20%] bottom-[0%] h-40 w-40 rounded-full bg-green-300 opacity-30 blur-2xl"></div>
+        </div>
       </div>
+
       {/* Brand Collaboration */}
       <div className="brand my-16 flex w-full overflow-hidden 2xl:container 2xl:mx-auto">
         <div className="logo-container animate-slider shrink-0 whitespace-nowrap">
@@ -88,6 +105,34 @@ export default function Home() {
           <img className="mx-10 inline-block" src={duoligo} alt="" />
           <img className="mx-10 inline-block" src={magicLeap} alt="" />
         </div>
+      </div>
+
+      {/* Top Categories */}
+      <div className="ml:flex-row ml:gap-0 ml:justify-between flex flex-col gap-8 px-3 lg:px-10 2xl:container 2xl:mx-auto">
+        <div className="left">
+          <h4 className="text-[20px] font-bold">Top Categories</h4>
+          <p className="text-[14px] text-[#646464]">
+            Explore our Popular Categories
+          </p>
+        </div>
+        <button
+          type="button"
+          className="cursor-pointer self-center rounded-3xl border border-black px-[25px] py-[5px]"
+        >
+          All Categories
+        </button>
+      </div>
+      <div className="w-full grid grid-cols-[repeat(auto-fill,234px)] justify-center gap-8 px-3 py-9 2xl:container 2xl:mx-auto">
+        <CategoryCard icon={artsDesignIcon} categoryName="Art & Design" totalCourse="8 Courses"/>
+        <CategoryCard icon={developmentIcon} categoryName="Development" totalCourse="38 Courses"/>
+        <CategoryCard icon={communicationIcon} categoryName="Communication" totalCourse="3 Courses"/>
+        <CategoryCard icon={videographyIcon} categoryName="Videography" totalCourse="4 Courses"/>
+        <CategoryCard icon={photographyIcon} categoryName="Photography" totalCourse="1 Courses"/>
+        <CategoryCard icon={marketingIcon} categoryName="Marketing" totalCourse="8 Courses"/>
+        <CategoryCard icon={contentWritingIcon} categoryName="Content Writing" totalCourse="38 Courses"/>
+        <CategoryCard icon={financeIcon} categoryName="Finance" totalCourse="3 Courses"/>
+        <CategoryCard icon={scienceIcon} categoryName="Science" totalCourse="4 Courses"/>
+        <CategoryCard icon={photographyIcon} categoryName="Network" totalCourse="1 Courses"/>
       </div>
     </>
   );

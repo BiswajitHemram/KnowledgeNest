@@ -5,7 +5,7 @@ import pageIconSVG from "../../assets/logo/remove.png";
 
 export default function Header() {
   return (
-    <header className="bg-white p-3 lg:px-5 2xl:container 2xl:mx-auto">
+    <header className="bg-white p-3 lg:px-10 2xl:container 2xl:mx-auto">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <Link
