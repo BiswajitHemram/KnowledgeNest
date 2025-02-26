@@ -5,6 +5,7 @@
   --breakpoint-mm: 23rem; /*368px*/
   --breakpoint-ml: 27rem; /*432px*/
   --breakpoint-category-card: 33.625rem; /*538px*/
+  --shadow-card: 0px 4px 15px -2px rgba(16, 24, 40, 0.3);
 
   @keyframes slider {
     from {
