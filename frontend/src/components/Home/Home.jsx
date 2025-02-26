@@ -15,6 +15,8 @@ import { HeroSection } from "./Hero";
 import { Brand } from "./Brand";
 import { Categories } from "./Categories";
 import { Courses } from "./Courses";
+import { StudentDashboard } from "./StudentDashboard";
+import { Teacher } from "./Teacher";
 
 export default function Home() {
   return (
@@ -30,6 +32,12 @@ export default function Home() {
 
       {/* Explore Courses */}
       <Courses />
+
+      {/* Student Dashboard */}
+      <StudentDashboard />
+
+      {/* Teacher Profile */}
+      <Teacher />
     </>
   );
 }
