@@ -279,10 +279,7 @@ export default function Courses() {
         </Swiper>
         <div className="custom-pagination"></div>
       </div>
-      <button type="button" className="ml-[50%] -translate-x-1/2 py-[7px] px-[15px] mt-10 bg-[#F9FAFB] rounded-[8px] border border-[#D0D5DD] cursor-pointer" onClick={()=>{
-        console.log("btn click")
-        
-      }}>Explore All Programs</button>
+      <button type="button" className="ml-[50%] -translate-x-1/2 py-[7px] px-[15px] mt-10 bg-[#F9FAFB] rounded-[8px] border border-[#D0D5DD] cursor-pointer">Explore All Programs</button>
     </>
   );
 }

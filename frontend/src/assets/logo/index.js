@@ -1,0 +1,1 @@
+export {default as pageLogo} from "./remove.png"

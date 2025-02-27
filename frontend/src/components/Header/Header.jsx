@@ -73,7 +73,7 @@ export default function Header() {
         <div className="hidden items-center space-x-4 lg:flex">
           <FaShoppingCart className="cursor-pointer text-2xl text-gray-700 hover:text-blue-600" />
           <button className="cursor-pointer rounded border border-blue-600 px-4 py-2 text-blue-600 hover:bg-blue-600 hover:text-white">
-            Sign In
+            Create Account
           </button>
           <button className="cursor-pointer rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
             Login

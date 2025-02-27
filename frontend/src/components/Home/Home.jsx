@@ -38,6 +38,8 @@ export default function Home() {
 
       {/* Teacher Profile */}
       <Teacher />
+
+      
     </>
   );
 }
