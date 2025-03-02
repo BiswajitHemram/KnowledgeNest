@@ -1,4 +1,4 @@
-import React from "react";
+import "./Brand.css"
 import LogoContainer from "./LogoContainer";
 import {
   codeCovIcon,
@@ -12,7 +12,7 @@ import {
 export default function Brand() {
   return (
     <>
-      <div className="brand my-16 flex w-full overflow-hidden 2xl:container 2xl:mx-auto">
+      <div className="brand my-[45px] flex w-full overflow-hidden sm:my-[60px] 2xl:container 2xl:mx-auto">
         <LogoContainer
           imgArray={[
             duolingoIcon,

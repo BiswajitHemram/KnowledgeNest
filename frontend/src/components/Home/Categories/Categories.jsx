@@ -9,26 +9,20 @@ import {
   scienceIcon,
   videographyIcon,
 } from "../../../assets/Home";
+import { SectionHeader } from "../SectionHeader";
 import CategoryCard from "./CategoryCard";
 
 export default function Categories() {
   return (
     <>
       {/* Top Categories Heading */}
-      <div className="ml:flex-row ml:gap-0 ml:justify-between flex flex-col gap-8 px-3 lg:px-10 2xl:container 2xl:mx-auto">
-        <div className="left">
-          <h4 className="text-[20px] font-bold">Top Categories</h4>
-          <p className="text-[14px] text-[#646464]">
-            Explore our Popular Categories
-          </p>
-        </div>
-        <button
-          type="button"
-          className="cursor-pointer self-center rounded-3xl border border-black px-[25px] py-[5px]"
-        >
-          All Categories
-        </button>
-      </div>
+      <SectionHeader
+        miniHeading="Explore Categories"
+        heading="Top Categories"
+        subtext="Browse the most popular categories and find the perfect class for you. "
+        showButton={true}
+        btnText="All Categories"
+      />
       {/* Category Card */}
       <div className="grid w-full grid-cols-[repeat(auto-fill,234px)] justify-center gap-8 px-3 py-9 2xl:container 2xl:mx-auto">
         <CategoryCard

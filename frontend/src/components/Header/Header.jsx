@@ -1,18 +1,18 @@
 import { FaShoppingCart, FaSearch } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
 import { Link, NavLink } from "react-router-dom";
-import pageIconSVG from "../../assets/logo/remove.png";
+import pageLogo from "../../assets/logo/remove.png";
 
 export default function Header() {
   return (
-    <header className="bg-white p-3 lg:px-10 2xl:container 2xl:mx-auto">
+    <header className="ml:px-6 bg-white p-3 lg:px-10 2xl:container 2xl:mx-auto 2xl:overflow-hidden 2xl:px-14">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <Link
           to="/"
           className="cursor-pointer text-2xl font-bold text-blue-600"
         >
-          <img src={pageIconSVG} alt="" style={{ width: 45, height: 45 }} />
+          <img src={pageLogo} alt="" style={{ width: 45, height: 45 }} />
         </Link>
 
         {/* Search Bar */}

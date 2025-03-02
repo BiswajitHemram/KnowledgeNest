@@ -8,41 +8,36 @@ import {
   roundRingIcon,
   smallDotIcon,
 } from "../../../assets/Home";
+import UpSkillCard from "./UpSkillCard";
 
 export default function Hero() {
   return (
     <>
-      <div className="ms:items-center mt-[45px] flex flex-col gap-9 p-3 sm:mt-[60px] sm:flex-row md:justify-between lg:px-10 2xl:container 2xl:mx-auto">
+      <div className="ms:items-center ml:px-6 mt-[45px] flex flex-col gap-9 px-3 sm:mt-[60px] sm:flex-row md:justify-between lg:px-10 2xl:container 2xl:mx-auto 2xl:overflow-hidden 2xl:px-14">
         {/* Left Side Text Content */}
         <div className="left relative order-2 sm:order-1 md:w-[570px]">
           {/* Hero Section Heading */}
-          <h1 className="z-10 text-2xl font-bold capitalize sm:text-[42px] lg:text-[64px] lg:leading-[82px]">
-            up your <span className="text-[#20B486]">skills</span> to{" "}
-            <span className="text-[#20B486]">advance</span> your{" "}
-            <span className="text-[#20B486]">career</span> path
+          <h1 className="text-heading text-space-cadet z-10 text-3xl font-bold capitalize sm:text-5xl sm:text-[42px] lg:text-[64px] lg:leading-[82px] 2xl:text-7xl">
+            up your <span className="text-medium-sea-green">skills</span> to{" "}
+            <span className="text-medium-sea-green">advance</span> your{" "}
+            <span className="text-medium-sea-green">career</span> path
           </h1>
           {/* Quote About Website */}
-          <p className="mt-[22px] text-[14px] text-[#646464] sm:w-[80%] md:w-auto">
+          <p className="text-medium-gray mt-[22px] text-xs sm:w-[80%] sm:text-sm md:w-auto lg:text-base 2xl:text-lg">
             Unlock your potential with KnowledgeNest — upskilling made simple,
             learning made limitless
           </p>
-          <button className="mt-[22px] h-[40px] w-[110px] cursor-pointer rounded-lg bg-[#20B486] font-semibold text-white lg:h-[50px] lg:w-[130px] lg:text-lg">
+          <button className="bg-medium-sea-green mt-[22px] h-[40px] w-[110px] cursor-pointer rounded-lg text-xs font-semibold text-white sm:text-sm lg:h-[50px] lg:w-[130px] lg:text-lg 2xl:h-[60px] 2xl:w-[150px] 2xl:text-xl">
             Get Started
           </button>
           {/* Outcome After UpSkill */}
           <ol className="ms:flex-nowrap ms:justify-normal mm:justify-center mt-[45px] flex flex-wrap justify-center gap-9 sm:justify-start">
-            <li className="flex flex-col items-center gap-2.5 text-center text-[14px] font-normal text-[#646464] capitalize">
-              <img src={publicSpeakingIcon} alt="" />
-              <p>Public Speaking</p>
-            </li>
-            <li className="flex flex-col items-center gap-2.5 text-center text-[14px] font-normal text-[#646464] capitalize">
-              <img src={careerOrientendIcon} alt="" />
-              <p>career oriented</p>
-            </li>
-            <li className="flex flex-col items-center gap-2.5 text-center text-[14px] font-normal text-[#646464] capitalize">
-              <img src={creativeThinkingIcon} alt="" />
-              <p>creative thinking</p>
-            </li>
+            <UpSkillCard image={publicSpeakingIcon} text="Public Speaking" />
+            <UpSkillCard image={careerOrientendIcon} text="career oriented" />
+            <UpSkillCard
+              image={creativeThinkingIcon}
+              text="creative thinking"
+            />
           </ol>
 
           <div className="absolute -top-[110px] -left-[140px] -z-10">
@@ -55,7 +50,7 @@ export default function Hero() {
         </div>
         {/* Right Side Image Content */}
         <div className="right relative order-1 sm:order-2">
-          <div className="ms:min-w-[300px] max-w-[255px] min-w-[160px] overflow-hidden rounded-full bg-[#20B486] p-[0.1px] lg:h-[400px] lg:min-w-[400px]">
+          <div className="ms:min-w-[300px] bg-medium-sea-green max-w-[255px] min-w-[160px] overflow-hidden rounded-full p-[0.1px] lg:h-[400px] lg:min-w-[400px]">
             <img
               src={fontpageIcon}
               className="ms:mt-[65px] mx-auto my-0 mt-[28px] h-[240px] lg:h-[340px]"
