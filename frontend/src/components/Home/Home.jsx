@@ -1,4 +1,3 @@
-import "./Home.css";
 import { HeroSection } from "./Hero";
 import { Brand } from "./Brand";
 import { Categories } from "./Categories";

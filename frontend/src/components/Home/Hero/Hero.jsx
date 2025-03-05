@@ -13,7 +13,7 @@ import UpSkillCard from "./UpSkillCard";
 export default function Hero() {
   return (
     <>
-      <div className="ms:items-center ml:px-6 mt-[45px] flex flex-col gap-9 px-3 sm:mt-[60px] sm:flex-row md:justify-between lg:px-10 2xl:container 2xl:mx-auto 2xl:overflow-hidden 2xl:px-14">
+      <div className="ms:items-center mt-[45px] flex flex-col gap-9 sm:mt-[60px] sm:flex-row md:justify-between">
         {/* Left Side Text Content */}
         <div className="left relative order-2 sm:order-1 md:w-[570px]">
           {/* Hero Section Heading */}

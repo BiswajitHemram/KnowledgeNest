@@ -99,7 +99,7 @@ export default function Courses() {
         subtext="Let's join our famous class, the knowledge provided will definitely
             be useful for you."
       />
-      <div className="swiper-container ml:w-[368px] mm:container mm:mx-auto relative cursor-grab px-3 pt-8 sm:w-[100%] lg:px-10">
+      <div className="swiper-container ml:w-[368px] mm:container mm:mx-auto relative cursor-grab  pt-8 sm:w-[100%]">
         <Swiper
           slidesPerView={1}
           spaceBetween={35}

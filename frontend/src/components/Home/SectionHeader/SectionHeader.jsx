@@ -11,7 +11,7 @@ export default function SectionHeader({
 }) {
   return (
     <div
-      className={`${showButton ? "ml:flex-row flex flex-col items-center justify-between gap-8" : "ml:gap-0"} ml:px-6 mt-[45px] mb-5 px-3 sm:mt-[60px] lg:mb-8 lg:px-10 2xl:container 2xl:mx-auto 2xl:px-14`}
+      className={`${showButton ? "ml:flex-row flex flex-col items-center justify-between gap-8" : "ml:gap-0"} mt-[45px] mb-5 sm:mt-[60px] lg:mb-8`}
     >
       <div>
         {showMiniHeading && miniHeading && (

@@ -33,7 +33,7 @@ export default function Review() {
         heading="Hear from Our Students"
         subtext="Real feedback from real learners — see how KnowledgeNest is helping students achieve their goals."
       />
-      <div className="swiper-container mm:container mm:mx-auto relative cursor-grab px-3 py-8 lg:px-10">
+      <div className="swiper-container mm:container mm:mx-auto ml:px-6 relative cursor-grab py-8">
         <Swiper
           spaceBetween={10}
           pagination={{

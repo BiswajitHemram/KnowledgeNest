@@ -18,7 +18,7 @@ export default function Teacher() {
           of students. We offer the knowledge and abilities."
       />
       {/* Teacher Cards */}
-      <div className="ml:grid-cols-[repeat(1,276px)] grid w-full justify-center gap-8 px-3 py-9 sm:grid-cols-[repeat(2,276px)] lg:mb-8 lg:px-10 xl:grid-cols-[repeat(4,276px)] 2xl:container 2xl:mx-auto">
+      <div className="ml:grid-cols-[repeat(1,276px)] grid w-full justify-center gap-8 py-9 sm:grid-cols-[repeat(2,276px)] lg:mb-8 xl:grid-cols-[repeat(4,276px)]">
         <TeacherCard
           teacherAvatar={teacherAvatar1}
           teacherName="Theresa Webb"

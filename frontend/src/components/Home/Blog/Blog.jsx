@@ -46,7 +46,7 @@ export default function Blog() {
         btnText="View All Blogs"
       />
 
-      <div className="mt-5 grid grid-cols-[repeat(1,1fr)] justify-center gap-8 px-3 py-8 sm:grid-cols-[repeat(1,620px)] sm:gap-10 lg:grid-cols-[repeat(2,minmax(460px,500px))] lg:gap-6 lg:px-10 xl:grid-cols-[repeat(2,592px)] xl:gap-8 2xl:container 2xl:mx-auto">
+      <div className="ml:px-6 mt-5 grid grid-cols-[repeat(1,1fr)] justify-center gap-8 py-8 sm:grid-cols-[repeat(1,620px)] sm:gap-10 lg:grid-cols-[repeat(2,minmax(460px,500px))] lg:gap-6 xl:grid-cols-[repeat(2,592px)] xl:gap-8">
         {blogDatabase.map((item, idx) => {
           if (idx == 2) {
             return (

@@ -24,7 +24,7 @@ export default function Categories() {
         btnText="All Categories"
       />
       {/* Category Card */}
-      <div className="grid w-full grid-cols-[repeat(auto-fill,234px)] justify-center gap-8 px-3 py-9 2xl:container 2xl:mx-auto">
+      <div className="grid w-full grid-cols-[repeat(auto-fill,234px)] justify-center gap-8 py-9">
         <CategoryCard
           icon={artsDesignIcon}
           categoryName="Art & Design"
