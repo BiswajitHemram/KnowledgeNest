@@ -7,3 +7,4 @@ export * from "./Teacher";
 export * from "./Review";
 export * from "./Blog";
 export * from "./SectionHeader";
+export * from "./CommonCard"

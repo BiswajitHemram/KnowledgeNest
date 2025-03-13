@@ -8,14 +8,15 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from "./components/Home/Home.jsx";
+import router from "./router/index.jsx";
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<App />}>
-      <Route path="" element={<Home />} />
-    </Route>,
-  ),
-);
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     <Route path="/" element={<App />}>
+//       <Route path="" element={<Home />} />
+//     </Route>,
+//   ),
+// );
 
 createRoot(document.getElementById("root")).render(
   <RouterProvider router={router} />,
