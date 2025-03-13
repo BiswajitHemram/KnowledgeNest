@@ -5,17 +5,16 @@ import {
   Route,
 } from "react-router-dom";
 import App from "../App";
-import Home from "../components/Home/Home";
-import CommonCard from "../components/Home/CommonCard";
+import { Course, Home } from "../pages";
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />}>
-      <Route path="" element={<Home />} />
-      <Route path="/test" element={<CommonCard />} />
-    </Route>
-  )
+    <Route path="/" element={<App />} errorElement={<ErrorPage />}>
+      <Route index element={<Home />} />
+      <Route path="/courses" element={<Course />} />
+    </Route>,
+  ),
 );
-
 
 export default router;

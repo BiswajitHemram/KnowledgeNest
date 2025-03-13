@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { pageLogo } from "../../../assets/logo";
 import { studentReviewAvatar1 } from "../../../assets/Home";
-import { SectionHeader } from "../SectionHeader";
+import  SectionHeader  from "../SectionHeader";
 
 export default function Review() {
   const studentReview = [

@@ -10,8 +10,8 @@ import {
   scienceIcon,
   videographyIcon,
 } from "../../../assets/Home";
-import { SectionHeader } from "../SectionHeader";
-import CategoryCard from "./CategoryCard";
+import SectionHeader from "../SectionHeader";
+import CommonCard from "../CommonCard";
 export default function Categories() {
   const categories = [
     {
@@ -67,62 +67,17 @@ export default function Categories() {
         btnText="All Categories"
       />
       <div className="grid w-full grid-cols-[repeat(auto-fill,234px)] justify-center gap-8 py-9">
-        {/* <CategoryCard
-          icon={artsDesignIcon}
-          categoryName="Art & Design"
-          totalCourse="8 Courses"
-        />
-        <CategoryCard
-          icon={developmentIcon}
-          categoryName="Development"
-          totalCourse="38 Courses"
-        />
-        <CategoryCard
-          icon={communicationIcon}
-          categoryName="Communication"
-          totalCourse="3 Courses"
-        />
-        <CategoryCard
-          icon={videographyIcon}
-          categoryName="Videography"
-          totalCourse="4 Courses"
-        />
-        <CategoryCard
-          icon={photographyIcon}
-          categoryName="Photography"
-          totalCourse="1 Courses"
-        />
-        <CategoryCard
-          icon={marketingIcon}
-          categoryName="Marketing"
-          totalCourse="8 Courses"
-        />
-        <CategoryCard
-          icon={contentWritingIcon}
-          categoryName="Content Writing"
-          totalCourse="38 Courses"
-        />
-        <CategoryCard
-          icon={financeIcon}
-          categoryName="Finance"
-          totalCourse="3 Courses"
-        />
-        <CategoryCard
-          icon={scienceIcon}
-          categoryName="Science"
-          totalCourse="4 Courses"
-        />
-        <CategoryCard
-          icon={photographyIcon}
-          categoryName="Network"
-          totalCourse="1 Courses"
-        /> */}
-        {categories.map(({icon, categoryName, totalCourse}, index) => (
-          <CategoryCard
+        {categories.map(({ icon, categoryName, totalCourse }, index) => (
+          <CommonCard
             key={index}
-            icon={icon}
-            categoryName={categoryName}
-            totalCourse={totalCourse}
+            image={icon}
+            title={categoryName}
+            description={totalCourse}
+            border={true}
+            shadow={true}
+            customCss="transform transition-transform duration-300 ease-in-out hover:-translate-y-2 h-[234px] w-[234px] cursor-pointer flex flex-col items-center justify-center gap-4"
+            customTitleCss="text-space-cadet text-[18px] font-bold"
+            customsubtitleCss="text-medium-sea-green text-[16px]"
           />
         ))}
       </div>

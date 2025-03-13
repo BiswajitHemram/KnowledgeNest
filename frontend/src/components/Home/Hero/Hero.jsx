@@ -17,7 +17,7 @@ export default function Hero() {
         {/* Left Side Text Content */}
         <div className="left relative order-2 sm:order-1 md:w-[570px]">
           {/* Hero Section Heading */}
-          <h1 className="text-heading text-space-cadet z-10 text-3xl font-bold capitalize sm:text-5xl sm:text-[42px] lg:text-[64px] lg:leading-[82px] 2xl:text-7xl">
+          <h1 className="text-heading text-space-cadet z-10 text-3xl font-bold capitalize sm:text-5xl sm:text-[42px] sm:leading-14 lg:text-[64px] lg:leading-[82px] 2xl:text-7xl">
             up your <span className="text-medium-sea-green">skills</span> to{" "}
             <span className="text-medium-sea-green">advance</span> your{" "}
             <span className="text-medium-sea-green">career</span> path

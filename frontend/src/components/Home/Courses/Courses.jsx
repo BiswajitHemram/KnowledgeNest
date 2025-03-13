@@ -13,7 +13,7 @@ import {
   image3,
   rating as ratingIcon,
 } from "../../../assets/Home";
-import { SectionHeader } from "../SectionHeader";
+import  SectionHeader  from "../SectionHeader";
 
 export default function Courses() {
   const courses = [
@@ -99,7 +99,7 @@ export default function Courses() {
         subtext="Let's join our famous class, the knowledge provided will definitely
             be useful for you."
       />
-      <div className="swiper-container ml:w-[368px] mm:container mm:mx-auto relative cursor-grab  pt-8 sm:w-[100%]">
+      <div className="swiper-container ml:w-[368px] mm:container mm:mx-auto relative cursor-grab pt-8 sm:w-[100%]">
         <Swiper
           slidesPerView={1}
           spaceBetween={35}

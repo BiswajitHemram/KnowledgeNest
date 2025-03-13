@@ -1,5 +1,5 @@
 import { BlogPic1, BlogPic2, BlogPic3 } from "../../../assets/Home";
-import { SectionHeader } from "../SectionHeader";
+import SectionHeader from "../SectionHeader";
 
 export default function Blog() {
   const blogDatabase = [

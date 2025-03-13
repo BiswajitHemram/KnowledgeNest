@@ -4,6 +4,12 @@ import { Link, NavLink } from "react-router-dom";
 import pageLogo from "../../assets/logo/remove.png";
 
 export default function Header() {
+  const navLinks = [
+    { path: "/", label: "Home" },
+    { path: "/courses", label: "Course" },
+    { path: "/blog", label: "Blog" },
+    { path: "/tech", label: "Teach" },
+  ];
   return (
     <header className="ml:px-6 bg-white p-3 lg:px-10 2xl:container 2xl:mx-auto 2xl:overflow-hidden 2xl:px-14">
       <div className="flex items-center justify-between">
@@ -27,46 +33,17 @@ export default function Header() {
 
         {/* Navigation Links */}
         <nav className="hidden space-x-6 font-medium text-gray-700 md:flex">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `hover:text-blue-600 ${
-                isActive ? "text-blue-600" : "text-gray-700"
-              }`
-            }
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/course"
-            className={({ isActive }) =>
-              `hover:text-blue-600 ${
-                isActive ? "text-blue-600" : "text-gray-700"
-              }`
-            }
-          >
-            Course
-          </NavLink>
-          <NavLink
-            to="/blog"
-            className={({ isActive }) =>
-              `hover:text-blue-600 ${
-                isActive ? "text-blue-600" : "text-gray-700"
-              }`
-            }
-          >
-            Blog
-          </NavLink>
-          <NavLink
-            to="/tech"
-            className={({ isActive }) =>
-              `hover:text-blue-600 ${
-                isActive ? "text-blue-600" : "text-gray-700"
-              }`
-            }
-          >
-            Teach
-          </NavLink>
+          {navLinks.map(({ path, label }) => (
+            <NavLink
+              key={path}
+              to={path}
+              className={({ isActive }) =>
+                `hover:text-blue-600 ${isActive ? "text-blue-600" : "text-gray-700"}`
+              }
+            >
+              {label}
+            </NavLink>
+          ))}
         </nav>
 
         {/* Cart & Auth Buttons */}

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+.errorBody {
+  min-height: 100vh;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  background-color: #000000;
+  background-image: radial-gradient(#11581E, #041607), 
+    url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.5rem;
+  color: rgba(128, 255, 128, 0.8);
+  text-shadow: 
+    0 0 1ex rgba(51, 255, 51, 1), 
+    0 0 2px rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+.noise {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* z-index: -1; */
+  opacity: 0.02;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: 
+    repeating-linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0.3) 50%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 0%,
+      rgba(32, 128, 32, 0.2) 2%,
+      rgba(32, 128, 32, 0.8) 3%,
+      rgba(32, 128, 32, 0.2) 3%,
+      transparent 100%
+    );
+
+  background-size: auto 4px, 100% 100%;
+  background-repeat: repeat, no-repeat;
+  background-position: 0 0, 0 -100vh; /* Initial position */
+  
+  animation: scan 7.5s linear infinite;
+}
+
+@keyframes scan {
+  0% { background-position: 0 0, 0 -100vh; }
+  100% { background-position: 0 0, 0 100vh; } /* Moves only second layer */
+}
+
+
+.terminal {
+  position: relative;
+  z-index: 10;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 2rem;
+  /* max-width: 600px; */
+}
+
+.terminal h1{
+  font-size: 4rem;
+}
+
+.terminal p:first-of-type{
+  width: 75%;
+}
+
+.errorCode {
+  color: white;
+}
+
+.output {
+  color: rgba(128, 255, 128, 0.8);
+  text-shadow: 
+    0 0 1px rgba(51, 255, 51, 0.4),
+    0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.output::before {
+  content: "> ";
+}
+
+.links a, .links button {
+  color: white;
+  text-decoration: none;
+}
+
+.links a::before, .links button::before {
+  content: "[";
+}
+
+.links a::after, .links button::after {
+  content: "]";
+}

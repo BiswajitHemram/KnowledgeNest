@@ -1,1 +1,5 @@
-export {default as pageLogo} from "./remove.png"
+import pageLogo from "./remove.png"
+
+export {
+    pageLogo
+}
