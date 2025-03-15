@@ -38,7 +38,7 @@ export default function Header() {
               key={path}
               to={path}
               className={({ isActive }) =>
-                `hover:text-blue-600 ${isActive ? "text-blue-600" : "text-gray-700"}`
+                `hover:text-blue-600  ${isActive ? "text-blue-600" : "text-gray-700"}`
               }
             >
               {label}

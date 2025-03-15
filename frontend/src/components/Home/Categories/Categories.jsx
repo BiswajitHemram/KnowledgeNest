@@ -10,7 +10,7 @@ import {
   scienceIcon,
   videographyIcon,
 } from "../../../assets/Home";
-import SectionHeader from "../SectionHeader";
+import  SectionHeader  from "../../SectionHeader";
 import CommonCard from "../CommonCard";
 export default function Categories() {
   const categories = [

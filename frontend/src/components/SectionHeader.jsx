@@ -1,17 +1,21 @@
 import React from "react";
+import { IoIosSearch } from "react-icons/io";
 
 export default function SectionHeader({
   miniHeading = "",
   heading,
   subtext = "",
   btnText = "",
+  searchText = "",
   showMiniHeading = true,
   showSubtext = true,
   showButton = false,
+  showSearch = false,
+  marginTop = "mt-[45px]",
 }) {
   return (
     <div
-      className={`${showButton ? "ml:flex-row flex flex-col items-center justify-between gap-8" : "ml:gap-0"} mt-[45px] mb-5 sm:mt-[60px] lg:mb-8`}
+      className={`${showButton || showSearch ? "ml:flex-row flex flex-col items-center justify-between gap-8" : "ml:gap-0"} mt-[45px] mb-5 sm:mt-[60px] lg:mb-8`}
     >
       <div>
         {showMiniHeading && miniHeading && (
@@ -35,6 +39,16 @@ export default function SectionHeader({
         >
           {btnText}
         </button>
+      )}
+      {showSearch && searchText && (
+        <div className="border-space-cadet flex items-center border-b">
+          <IoIosSearch className="h-[20px] w-[20px] sm:h-[30px] sm:w-[30px]" />
+          <input
+            type="search"
+            placeholder={searchText}
+            className="text-space-cadet mm:w-[200px] w-[150px] lg:pl-5 pl-3 mm:text-base py-1.5 text-sm outline-none sm:text-lg md:w-[350px]"
+          />
+        </div>
       )}
     </div>
   );

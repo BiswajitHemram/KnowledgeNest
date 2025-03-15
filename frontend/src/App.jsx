@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="ml:px-6 px-3 lg:px-10 2xl:container 2xl:mx-auto 2xl:overflow-hidden 2xl:px-14">
+      <main className="ml:px-6 mt-[45px] min-h-[calc(100vh-538px)] px-3 lg:px-10 2xl:container 2xl:mx-auto 2xl:overflow-hidden 2xl:px-14">
         <Outlet />
       </main>
       <Footer />

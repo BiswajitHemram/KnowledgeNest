@@ -8,7 +8,7 @@ import {
 } from "../../../assets/Home";
 import CommonCard from "../CommonCard";
 // import { teacherAvatar2 } from "../../../assets/Home";
-import SectionHeader from "../SectionHeader";
+import  SectionHeader  from "../../SectionHeader";
 
 export default function Teacher() {
   const teachers = [

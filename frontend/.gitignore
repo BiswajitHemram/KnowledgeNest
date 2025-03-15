@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 .prettierrc
+.VsCodeCounter
 
 # Editor directories and files
 .vscode/*

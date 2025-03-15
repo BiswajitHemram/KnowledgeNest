@@ -13,9 +13,12 @@ import {
   image3,
   rating as ratingIcon,
 } from "../../../assets/Home";
-import  SectionHeader  from "../SectionHeader";
+import  SectionHeader  from "../../SectionHeader";
+
+import { useNavigate } from "react-router-dom";
 
 export default function Courses() {
+  const navigate = useNavigate()
   const courses = [
     {
       id: crypto.randomUUID(),
@@ -117,7 +120,7 @@ export default function Courses() {
           {courses.map((course) => (
             <SwiperSlide
               key={course.id}
-              className="rounded-[8px] border border-[#e1d9d9] p-4 md:p-6 lg:p-8"
+              className="rounded-[8px] border border-[#e1d9d9] p-4 md:p-6 lg:px-5 lg:py-8 2xl:p-8"
             >
               <img
                 src={course.image}
@@ -145,7 +148,7 @@ export default function Courses() {
                     <img src={course.instructor.avatar} alt="Instructor" />
                     <div className="text-[12px]">
                       <p className="text-[#101828]">{course.instructor.name}</p>
-                      <p className="text-[#667085]">{course.enrolled}</p>
+                      <p className="text-[#667085]">{course.enrolled} Enrolled</p>
                     </div>
                   </div>
                   <p className="text-[20px] font-bold text-[#3FC89E] lg:text-2xl">
@@ -161,6 +164,9 @@ export default function Courses() {
       <button
         type="button"
         className="mt-10 ml-[50%] -translate-x-1/2 cursor-pointer rounded-[8px] border border-[#D0D5DD] bg-[#F9FAFB] px-[15px] py-[7px]"
+        onClick={()=>{
+          navigate("/courses")
+        }}
       >
         Explore All Programs
       </button>

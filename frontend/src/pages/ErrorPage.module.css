@@ -99,6 +99,8 @@
 .links a, .links button {
   color: white;
   text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 .links a::before, .links button::before {

@@ -1,4 +1,4 @@
-import { useRouteError, Link, useNavigate } from "react-router-dom";
+import { useRouteError, Link, useNavigate, useParams } from "react-router-dom";
 import styles from "./ErrorPage.module.css";
 
 export default function ErrorPage() {
